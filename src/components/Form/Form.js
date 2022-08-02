@@ -11,8 +11,16 @@ const Form = () => {
 
 	const submitHandler = (event) => {
 		ctx.formSubmitHandler(event);
-		const urlString = urlRef.current.value;
-		ctx.addImageUrl(urlString);
+		var reader = new FileReader();
+		// let base64String = "";
+
+		reader.onload = function () {
+			// base64String = reader.result.replace("data:", "").replace(/^.+,/, "");
+			ctx.addImageUrl(reader.result);
+		};
+
+		reader.readAsDataURL(urlRef.current.files[0]);
+		urlRef.current.value = "";
 	};
 
 	return (
@@ -20,7 +28,7 @@ const Form = () => {
 			<Input
 				ref={urlRef}
 				label="Image Url"
-				input={{ type: "url", id: "url", name: "url" }}
+				input={{ type: "file", id: "imageUrl", name: "imageUrl" }}
 			/>
 			<Button>ADD</Button>
 		</form>
