@@ -1,0 +1,30 @@
+.navbar {
+	background-color: rgb(37, 36, 36);
+	color: white;
+	padding: 1rem;
+	/* position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%; */
+}
+
+.navbar ul {
+	width: 80%;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+	list-style: none;
+	align-items: center;
+}
+
+.navbar li span {
+	display: block;
+	margin: 6px 0px;
+	width: 3.4rem;
+	height: 0.2rem;
+	background-color: white;
+}
+
+.span-container {
+	cursor: pointer;
+}

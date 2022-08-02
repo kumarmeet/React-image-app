@@ -1,0 +1,11 @@
+.input {
+	display: flex;
+	width: 68%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.input input {
+	padding: 0.4rem 1.4rem;
+	width: 75%;
+}
